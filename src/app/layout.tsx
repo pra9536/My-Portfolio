@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Prateek Yadav Portfolio",
     images: [
       {
-        url: "/Photo1.png", // ✅ correct path
+        url: "/og-img.png", // ✅ correct path
         width: 1200,
         height: 630,
         alt: "Prateek Yadav | Java Full Stack Developer",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Prateek Yadav | Java Full Stack Developer",
     description:
       "Java Full Stack Developer skilled in Spring Boot, React, MySQL, REST APIs, and scalable cloud applications.",
-    images: ["/Photo1.png"],
+    images: ["/og-img.png"],
   },
 
   robots: {
