@@ -12,13 +12,16 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-background to-background border-t border-border">
+    <footer
+      aria-label="Site footer"
+      className="bg-gradient-to-b from-background to-background border-t border-border"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
 
         {/* ================= TOP SECTION ================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-start md:items-center">
 
-          {/* LEFT: CONTACT INFO */}
+          {/* ================= LEFT : CONTACT INFO ================= */}
           <div className="space-y-4 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground">
               Get in Touch
@@ -29,6 +32,7 @@ export function Footer() {
               <Mail className="w-5 h-5 transition-colors group-hover:text-orange-400" />
               <a
                 href="mailto:prateek246729@gmail.com"
+                aria-label="Send email to Prateek Yadav"
                 className="text-sm sm:text-base transition-all duration-200
                 group-hover:text-orange-400 group-hover:underline"
               >
@@ -40,11 +44,12 @@ export function Footer() {
             <div className="group flex items-center justify-center md:justify-start gap-3 text-muted-foreground">
               <Phone className="w-5 h-5 transition-colors group-hover:text-orange-400" />
               <a
-                href="N/A"
+                href="tel:+916398480854"
+                aria-label="Call Prateek Yadav"
                 className="text-sm sm:text-base transition-all duration-200
                 group-hover:text-orange-400 group-hover:underline"
               >
-                N/A
+                +91 63984 80854
               </a>
             </div>
 
@@ -55,6 +60,7 @@ export function Footer() {
                 href="https://www.google.com/maps?q=Kanpur,+Uttar+Pradesh"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View location on Google Maps"
                 className="text-sm sm:text-base transition-all duration-200
                 group-hover:text-orange-400 group-hover:underline"
               >
@@ -63,25 +69,38 @@ export function Footer() {
             </div>
           </div>
 
-          {/* RIGHT: SOCIAL ICONS */}
+          {/* ================= RIGHT : SOCIAL ICONS ================= */}
           <div className="flex justify-center md:justify-end gap-3 sm:gap-4 flex-wrap">
             {[
-              { name: "GitHub", icon: Github, link: "https://github.com/pra9536" },
+              {
+                name: "GitHub",
+                icon: Github,
+                link: "https://github.com/pra9536",
+                label: "Visit GitHub profile",
+              },
               {
                 name: "LinkedIn",
                 icon: Linkedin,
                 link: "https://linkedin.com/in/prateek-yadav-2616a6257",
+                label: "Visit LinkedIn profile",
               },
-              { name: "Twitter", icon: Twitter, link: "#" },
+              {
+                name: "Twitter",
+                icon: Twitter,
+                link: "#",
+                label: "Visit Twitter profile",
+              },
               {
                 name: "Instagram",
                 icon: Instagram,
                 link: "https://www.instagram.com/prateek___yadav____/",
+                label: "Visit Instagram profile",
               },
               {
                 name: "Email",
                 icon: Mail,
                 link: "mailto:prateek246729@gmail.com",
+                label: "Send email to Prateek Yadav",
               },
             ].map((item, i) => (
               <div key={i} className="relative group">
@@ -89,6 +108,7 @@ export function Footer() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={item.label}
                   className="
                     w-10 h-10 sm:w-11 sm:h-11
                     rounded-full bg-secondary/50
@@ -103,7 +123,7 @@ export function Footer() {
                   <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
 
-                {/* Tooltip (hide on very small screens) */}
+                {/* Tooltip (desktop only) */}
                 <span
                   className="
                     hidden sm:block

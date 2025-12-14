@@ -28,7 +28,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  /* ===== Smooth Scroll with Offset ===== */
+  /* ===== Smooth Scroll ===== */
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (!element) return
@@ -41,7 +41,7 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
-  /* ===== Logo Click (Refresh Home) ===== */
+  /* ===== Logo Click ===== */
   const handleLogoClick = () => {
     localStorage.setItem("theme", "light")
     window.location.reload()
@@ -49,6 +49,7 @@ export function Navbar() {
 
   return (
     <nav
+      aria-label="Main navigation"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
@@ -56,13 +57,13 @@ export function Navbar() {
           : "bg-transparent"
       )}
     >
-      {/* 🔧 height & padding responsive */}
       <div className="w-full px-3 sm:px-6 lg:px-10 py-2 sm:py-3">
         <div className="flex items-center justify-between">
 
-          {/* ===== LOGO ===== */}
-          <div
+          {/* ===== LOGO (ACCESSIBLE) ===== */}
+          <button
             onClick={handleLogoClick}
+            aria-label="Reload home and reset theme"
             className="flex items-center gap-2 cursor-pointer shrink-0"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500 rounded-full flex items-center justify-center">
@@ -71,11 +72,10 @@ export function Navbar() {
               </span>
             </div>
 
-            {/* hide name on very small screens */}
             <span className="hidden sm:block font-bold text-base sm:text-lg text-foreground">
               Prateek Yadav
             </span>
-          </div>
+          </button>
 
           {/* ===== DESKTOP MENU ===== */}
           <div className="hidden lg:flex items-center gap-8">
@@ -90,16 +90,14 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* ===== RIGHT SIDE ===== */}
+          {/* ===== RIGHT ===== */}
           <div className="flex items-center gap-1 sm:gap-2">
-
-            {/* Theme Toggle */}
             <ThemeToggle />
 
             {/* ===== MOBILE MENU ===== */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label="Open menu">
                   <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Button>
               </SheetTrigger>
@@ -108,11 +106,12 @@ export function Navbar() {
                 side="right"
                 className="w-full max-w-[320px] sm:max-w-[380px] bg-background p-5 sm:p-6"
               >
-                {/* ===== Mobile Header ===== */}
+                {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-8">
-                  <div
+                  <button
                     onClick={handleLogoClick}
-                    className="flex items-center gap-2 cursor-pointer"
+                    aria-label="Reload home"
+                    className="flex items-center gap-2"
                   >
                     <div className="w-9 h-9 bg-orange-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">PY</span>
@@ -120,40 +119,28 @@ export function Navbar() {
                     <span className="font-bold text-base sm:text-lg">
                       Prateek Yadav
                     </span>
-                  </div>
+                  </button>
 
-                  {/* Close button */}
                   <button
+                    aria-label="Close menu"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="
-                      w-9 h-9 sm:w-10 sm:h-10 rounded-full
-                      flex items-center justify-center
-                      border border-border
-                      text-muted-foreground
-                      hover:text-orange-500
-                      hover:border-orange-500
-                      hover:bg-orange-500/10
-                      transition-all duration-300
-                    "
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center
+                    border border-border text-muted-foreground
+                    hover:text-orange-500 hover:border-orange-500 hover:bg-orange-500/10"
                   >
                     ✕
                   </button>
                 </div>
 
-                {/* ===== Mobile Nav Links ===== */}
+                {/* Mobile Links */}
                 <div className="flex flex-col gap-2">
                   {navItems.map((item) => (
                     <button
                       key={item.name}
                       onClick={() => scrollToSection(item.href)}
-                      className="
-                        text-left text-base sm:text-lg font-medium
-                        px-4 py-3 rounded-xl
-                        text-muted-foreground
-                        hover:text-foreground
-                        hover:bg-muted
-                        transition-all duration-200
-                      "
+                      className="text-left text-base sm:text-lg font-medium
+                      px-4 py-3 rounded-xl
+                      text-muted-foreground hover:text-foreground hover:bg-muted"
                     >
                       {item.name}
                     </button>

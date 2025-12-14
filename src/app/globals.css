@@ -84,12 +84,17 @@
 }
 
 /* =====================================================
-   🧱 BASE STYLES
+   🧱 BASE STYLES (OPTIMIZED – SAFE)
    ===================================================== */
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+  }
+
+  /* Accessibility focus ring */
+  *:focus-visible {
+    @apply outline-ring/50;
   }
 
   html {
@@ -177,7 +182,18 @@
 }
 
 /* =====================================================
-   📱 iPHONE SE / SMALL SCREEN OPTIMIZATION
+   ♿ REDUCED MOTION (ACCESSIBILITY – PRO)
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   📱 SMALL SCREEN OPTIMIZATION
    ===================================================== */
 
 @media (max-width: 375px) {
@@ -190,7 +206,7 @@
     padding-right: 1rem;
   }
 
-  /* Heavy animations off on small devices */
+  /* Heavy animations off on very small devices */
   .animate-blob,
   .animate-float {
     animation: none;

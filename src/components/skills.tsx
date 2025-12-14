@@ -9,21 +9,21 @@ export function Skills() {
   const [showAll, setShowAll] = useState(false)
 
   return (
-    <section id="skills" ref={ref} className="py-20 sm:py-24 px-4">
+    <section id="skills" ref={ref} className="py-24 px-4">
       <div className="container mx-auto max-w-7xl">
 
         {/* ================= HEADING ================= */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Technical <span className="text-orange-500">Skills</span>
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+          <p className="text-muted-foreground text-lg">
             Comprehensive expertise across the full technology stack
           </p>
         </div>
 
-        {/* ================= ROW 1 ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 justify-items-center">
+        {/* ================= ROW 1 (ALWAYS VISIBLE) ================= */}
+        <div className="grid md:grid-cols-2 gap-12 justify-items-center">
           <LayeredCard>
             <SkillCard title="Programming Languages">
               <SkillBar label="Java" percent={95} color="from-red-500 to-orange-500" tag="J" />
@@ -43,10 +43,11 @@ export function Skills() {
           </LayeredCard>
         </div>
 
-        {/* ================= TOGGLED SECTIONS ================= */}
+        {/* ================= ROW 2 + ROW 3 (TOGGLE) ================= */}
         {showAll && (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-10 sm:mt-12 justify-items-center">
+            {/* ROW 2 */}
+            <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
               <LayeredCard>
                 <SkillCard title="Frontend Technologies">
                   <SkillBar label="React" percent={90} color="from-cyan-500 to-blue-500" tag="R" />
@@ -66,7 +67,8 @@ export function Skills() {
               </LayeredCard>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-10 sm:mt-12 justify-items-center">
+            {/* ROW 3 */}
+            <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
               <LayeredCard>
                 <SkillCard title="AI & Cloud Technologies">
                   <SkillBar label="Artificial Intelligence" percent={80} color="from-fuchsia-500 to-purple-600" tag="AI" />
@@ -88,18 +90,18 @@ export function Skills() {
           </>
         )}
 
-        {/* ================= VIEW BUTTON ================= */}
-        <div className="flex justify-center mt-12 sm:mt-16">
+        {/* ================= VIEW ALL / SHOW LESS BUTTON ================= */}
+        <div className="flex justify-center mt-16">
           <div
             className={`bg-gradient-to-br from-secondary/80 to-secondary/40
-            backdrop-blur-xl rounded-2xl p-5 sm:p-6
+            backdrop-blur-xl rounded-2xl p-6
             border border-border/50
             shadow-2xl transition-all duration-700
             ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-8 sm:px-10 py-3 rounded-full font-semibold
+              className="px-10 py-3 rounded-full font-semibold
               bg-orange-500 text-white
               hover:bg-orange-600
               transition-all duration-300
@@ -110,19 +112,20 @@ export function Skills() {
           </div>
         </div>
 
-        {/* ================= CS FUNDAMENTALS ================= */}
+        {/* ================= COMPUTER SCIENCE FUNDAMENTALS ================= */}
         <div
-          className={`mt-12 sm:mt-14 bg-gradient-to-br from-secondary/80 to-secondary/40
-          backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-border/50
+          className={`mt-14 bg-gradient-to-br from-secondary/80 to-secondary/40
+          backdrop-blur-xl rounded-2xl p-8 border border-border/50
           shadow-2xl transition-all duration-1000
-          ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+          shadow-[0_0_60px_-15px_rgba(34,197,94,0.25)]`}
         >
-          <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center gap-3">
+          <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
             <div className="w-2 h-8 bg-gradient-to-b from-green-400 to-green-500 rounded-full"></div>
             Computer Science Fundamentals
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { tag: "DSA", label: "Data Structures and Algorithms" },
               { tag: "OS", label: "Operating System" },
@@ -131,16 +134,16 @@ export function Skills() {
             ].map((item) => (
               <div
                 key={item.tag}
-                className="group bg-secondary/50 border border-border/30 rounded-xl p-4 text-center
-                transition-all duration-700 hover:scale-105 hover:bg-secondary/70"
+                className={`group bg-secondary/50 border border-border/30 rounded-xl p-4 text-center
+                transition-all duration-700 hover:scale-105 hover:bg-secondary/70`}
               >
-                <div className="min-w-[56px] h-12 px-4 bg-gradient-to-r from-green-500 to-green-600
+                <div className="min-w-[64px] h-12 px-4 bg-gradient-to-r from-green-500 to-green-600
                 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold text-sm tracking-wide">
                     {item.tag}
                   </span>
                 </div>
-                <span className="text-muted-foreground text-xs sm:text-sm font-medium group-hover:text-foreground">
+                <span className="text-muted-foreground text-sm font-medium group-hover:text-foreground transition-colors">
                   {item.label}
                 </span>
               </div>
@@ -157,13 +160,14 @@ export function Skills() {
 
 function LayeredCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative w-full max-w-xl transition-all duration-500">
+    <div className="relative w-full max-w-xl group transition-all duration-500">
       <div
-        className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4
+        className="absolute inset-0 translate-x-4 translate-y-4
         rounded-2xl bg-gradient-to-br from-secondary/60 to-secondary/30
         border border-border/40 blur-[1.5px] opacity-90
         shadow-[0_25px_60px_-20px_rgba(0,0,0,0.6)]
-        transition-all duration-500"
+        transition-all duration-500
+        group-hover:translate-x-2 group-hover:translate-y-2"
       />
       <div className="relative z-10">{children}</div>
     </div>
@@ -182,11 +186,12 @@ function SkillCard({
   return (
     <div
       className="bg-gradient-to-br from-secondary/80 to-secondary/40
-      backdrop-blur-xl rounded-2xl p-6 sm:p-8
-      border border-border/50 shadow-2xl
-      transition-all duration-500"
+      backdrop-blur-xl rounded-2xl p-8 border border-border/50 shadow-2xl
+      transition-all duration-500
+      group-hover:-translate-y-2
+      group-hover:shadow-[0_40px_80px_-25px_rgba(0,0,0,0.7)]"
     >
-      <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center gap-3">
+      <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
         <div className="w-2 h-8 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full"></div>
         {title}
       </h3>
@@ -212,21 +217,12 @@ function SkillBar({
     <div>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
-          <div
-            className={`w-9 h-9 sm:w-10 sm:h-10
-            bg-gradient-to-r ${color}
-            rounded-lg flex items-center justify-center
-            font-bold text-white text-xs sm:text-sm`}
-          >
+          <div className={`w-10 h-10 bg-gradient-to-r ${color} rounded-lg flex items-center justify-center font-bold text-white`}>
             {tag}
           </div>
-          <span className="text-muted-foreground text-sm">
-            {label}
-          </span>
+          <span className="text-muted-foreground">{label}</span>
         </div>
-        <span className="text-xs sm:text-sm text-muted-foreground font-mono">
-          {percent}%
-        </span>
+        <span className="text-sm text-muted-foreground font-mono">{percent}%</span>
       </div>
 
       <div className="relative h-2 bg-secondary rounded-full overflow-hidden">
