@@ -5,12 +5,19 @@ import { Inter } from "next/font/google"
 import type React from "react"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"], display: "swap" })
+/* ================= FONT ================= */
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+})
 
 /* ================= SEO METADATA ================= */
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://my-portfolio-weld-one-d6hj1j4iw4.vercel.app"),
+  metadataBase: new URL(
+    "https://my-portfolio-weld-one-d6hj1j4iw4.vercel.app"
+  ),
 
   title: {
     default: "Prateek Yadav | Java Full Stack Developer",
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Prateek Yadav is a Java Full Stack Developer specializing in Spring Boot, React, MySQL, REST APIs, and scalable web applications.",
+    "Prateek Yadav is a Java Full Stack Developer specializing in Spring Boot, React, MySQL, REST APIs, and scalable cloud-ready web applications. Explore real-world projects, technical skills, and professional experience.",
 
   keywords: [
     "Prateek Yadav",
@@ -37,15 +44,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Prateek Yadav | Java Full Stack Developer",
     description:
-      "Java Full Stack Developer with expertise in Spring Boot, React, and scalable backend systems.",
+      "Java Full Stack Developer with expertise in Spring Boot, React, MySQL, and scalable backend systems. View projects, skills, and professional work.",
     url: "https://my-portfolio-weld-one-d6hj1j4iw4.vercel.app",
     siteName: "Prateek Yadav Portfolio",
     images: [
       {
-        url: "/Photo1.png",
+        url: "/Photo1.png", // ✅ correct path
         width: 1200,
         height: 630,
-        alt: "Prateek Yadav Portfolio",
+        alt: "Prateek Yadav | Java Full Stack Developer",
       },
     ],
     locale: "en_IN",
@@ -56,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prateek Yadav | Java Full Stack Developer",
     description:
-      "Java Full Stack Developer | Spring Boot • React • MySQL • REST APIs",
+      "Java Full Stack Developer skilled in Spring Boot, React, MySQL, REST APIs, and scalable cloud applications.",
     images: ["/Photo1.png"],
   },
 
@@ -66,7 +73,7 @@ export const metadata: Metadata = {
   },
 }
 
-/* ================= VIEWPORT (NEW & CORRECT) ================= */
+/* ================= VIEWPORT (CORRECT WAY) ================= */
 
 export const viewport: Viewport = {
   width: "device-width",
