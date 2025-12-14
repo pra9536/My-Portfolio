@@ -43,13 +43,9 @@ export function Navbar() {
 
   /* ===== Logo Click (Refresh Home) ===== */
   const handleLogoClick = () => {
-  // 🔴 Remove saved dark theme
-  localStorage.setItem("theme", "light")
-
-  // 🔁 Hard refresh
-  window.location.reload()
-}
-
+    localStorage.setItem("theme", "light")
+    window.location.reload()
+  }
 
   return (
     <nav
@@ -60,18 +56,23 @@ export function Navbar() {
           : "bg-transparent"
       )}
     >
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
+      {/* 🔧 height & padding responsive */}
+      <div className="w-full px-3 sm:px-6 lg:px-10 py-2 sm:py-3">
         <div className="flex items-center justify-between">
 
-          {/* ===== LOGO (LEFT CORNER) ===== */}
+          {/* ===== LOGO ===== */}
           <div
             onClick={handleLogoClick}
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer shrink-0"
           >
-            <div className="w-9 h-9 bg-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PY</span>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-xs sm:text-sm">
+                PY
+              </span>
             </div>
-            <span className="hidden sm:block font-bold text-lg text-foreground">
+
+            {/* hide name on very small screens */}
+            <span className="hidden sm:block font-bold text-base sm:text-lg text-foreground">
               Prateek Yadav
             </span>
           </div>
@@ -82,15 +83,15 @@ export function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium cursor-pointer"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
               >
                 {item.name}
               </button>
             ))}
           </div>
 
-          {/* ===== RIGHT CORNER (Theme + Mobile) ===== */}
-          <div className="flex items-center gap-2">
+          {/* ===== RIGHT SIDE ===== */}
+          <div className="flex items-center gap-1 sm:gap-2">
 
             {/* Theme Toggle */}
             <ThemeToggle />
@@ -99,16 +100,16 @@ export function Navbar() {
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 </Button>
               </SheetTrigger>
 
               <SheetContent
                 side="right"
-                className="w-full sm:w-[380px] bg-background p-6"
+                className="w-full max-w-[320px] sm:max-w-[380px] bg-background p-5 sm:p-6"
               >
                 {/* ===== Mobile Header ===== */}
-                <div className="flex items-center justify-between mb-10">
+                <div className="flex items-center justify-between mb-8">
                   <div
                     onClick={handleLogoClick}
                     className="flex items-center gap-2 cursor-pointer"
@@ -116,16 +117,16 @@ export function Navbar() {
                     <div className="w-9 h-9 bg-orange-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-sm">PY</span>
                     </div>
-                    <span className="font-bold text-lg">
+                    <span className="font-bold text-base sm:text-lg">
                       Prateek Yadav
                     </span>
                   </div>
 
-                  {/* ❌ Custom Close */}
+                  {/* Close button */}
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="
-                      w-10 h-10 rounded-full
+                      w-9 h-9 sm:w-10 sm:h-10 rounded-full
                       flex items-center justify-center
                       border border-border
                       text-muted-foreground
@@ -140,13 +141,13 @@ export function Navbar() {
                 </div>
 
                 {/* ===== Mobile Nav Links ===== */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2">
                   {navItems.map((item) => (
                     <button
                       key={item.name}
                       onClick={() => scrollToSection(item.href)}
                       className="
-                        text-left text-lg font-medium
+                        text-left text-base sm:text-lg font-medium
                         px-4 py-3 rounded-xl
                         text-muted-foreground
                         hover:text-foreground

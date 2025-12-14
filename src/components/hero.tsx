@@ -118,31 +118,40 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center px-6 overflow-hidden"
+      className="relative min-h-screen flex items-center px-4 sm:px-6 overflow-hidden"
     >
       {/* ===== BACKGROUND ===== */}
       <div className="absolute inset-0">
-  <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background" />
 
-  <div className="absolute top-24 left-24 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl" />
+        {/* hide heavy blobs on very small screens */}
+        <div className="hidden sm:block absolute top-24 left-24 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl" />
 
-  {/* Light mode = RED | Dark mode = GREEN */}
-  <div className="absolute bottom-24 right-24 w-96 h-96 
-                  bg-red-500/20 
-                  dark:bg-green-500/20 
-                  rounded-full blur-3xl" />
-</div>
+        <div className="hidden sm:block absolute bottom-24 right-24 w-96 h-96 
+          bg-red-500/20 dark:bg-green-500/20 
+          rounded-full blur-3xl" />
+      </div>
 
-
-      <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto grid gap-12 lg:grid-cols-2 items-center">
         {/* ================= LEFT ================= */}
-        <div className="space-y-8">
-          <span className="inline-flex items-center min-h-[44px] px-6 py-3 rounded-full text-sm md:text-base font-bold tracking-widest bg-orange-500/10 text-orange-500 dark:text-red-500 border border-orange-500/30">
+        <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+          <span className="
+            inline-flex items-center justify-center
+            min-h-[40px] px-4 sm:px-6 py-2 sm:py-3
+            rounded-full text-xs sm:text-sm md:text-base
+            font-bold tracking-widest
+            bg-orange-500/10 text-orange-500
+            dark:text-red-500
+            border border-orange-500/30
+          ">
             {titleText}
             <span className="ml-1 animate-pulse">|</span>
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+          <h1 className="
+            text-3xl sm:text-4xl md:text-6xl lg:text-7xl
+            font-extrabold leading-tight
+          ">
             Building <span className="text-orange-500">Scalable</span>
             <br />
             & <span className="text-green-400">Intelligent</span> Web
@@ -150,46 +159,60 @@ export function Hero() {
             Applications
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-xl">
+          <p className="
+            text-sm sm:text-base md:text-lg
+            text-muted-foreground
+            max-w-xl mx-auto lg:mx-0
+          ">
             Java • Spring Boot • React • MySQL • Cloud & AI-Enabled Systems
           </p>
 
-          <div className="flex gap-4 flex-wrap pt-4 ">
+          <div className="
+            flex flex-col sm:flex-row
+            gap-3 sm:gap-4
+            justify-center lg:justify-start
+            pt-2 sm:pt-4
+          ">
             <Button
-              className="rounded-full px-8 bg-orange-500 hover:bg-orange-600 cursor-pointer "
+              className="rounded-full px-6 sm:px-8 bg-orange-500 hover:bg-orange-600"
               onClick={scrollToProjects}
             >
               View Projects <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
 
             <Button
-  variant="outline"
-  className="
-    rounded-full px-8 cursor-pointer
-    border-gray-500/40
-    transition-all duration-300
-
-    hover:bg-blue-600 hover:text-white hover:border-blue-600
-    dark:hover:bg-blue-600 dark:hover:text-white dark:hover:border-blue-600
-  "
-  onClick={downloadResume}
->
-  <Download className="mr-2 w-4 h-4" />
-  Download Resume
-</Button>
-
+              variant="outline"
+              className="
+                rounded-full px-6 sm:px-8
+                border-gray-500/40
+                transition-all duration-300
+                hover:bg-blue-600 hover:text-white hover:border-blue-600
+                dark:hover:bg-blue-600 dark:hover:text-white dark:hover:border-blue-600
+              "
+              onClick={downloadResume}
+            >
+              <Download className="mr-2 w-4 h-4" />
+              Download Resume
+            </Button>
           </div>
         </div>
 
         {/* ================= RIGHT (CODE CARD) ================= */}
-        <div className="relative">
-          {/* JAVA ICON BADGE */}
-          <div className="absolute -top-3 -right-7 w-11 h-13 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse z-20">
-            <i className="fab fa-java text-white text-2xl"></i>
+        <div className="relative hidden md:block">
+          {/* JAVA ICON */}
+          <div className="absolute -top-3 -right-7 w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse z-20">
+            <i className="fab fa-java text-white text-xl"></i>
           </div>
 
-          {/* CODE CARD */}
-          <div className="relative bg-gradient-to-br from-card to-card border border-border rounded-2xl p-6 text-sm font-mono shadow-2xl rotate-6 hover:rotate-3 transition-transform duration-500">
+          <div className="
+            relative bg-gradient-to-br from-card to-card
+            border border-border
+            rounded-2xl p-5 sm:p-6
+            text-xs sm:text-sm
+            font-mono shadow-2xl
+            rotate-3 lg:rotate-6
+            hover:rotate-3 transition-transform duration-500
+          ">
             <div className="flex gap-2 mb-3">
               <span className="w-3 h-3 rounded-full bg-red-500" />
               <span className="w-3 h-3 rounded-full bg-yellow-400" />

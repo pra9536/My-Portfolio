@@ -100,34 +100,35 @@ export function Projects() {
       <section
         id="projects"
         ref={ref}
-        className="py-24 px-4 bg-background text-foreground"
+        className="py-20 sm:py-24 px-4 bg-background text-foreground"
       >
         <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               My Projects{" "}
               <span className="text-transparent bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
                 Highlight
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Real-world projects demonstrating strong technical skills
             </p>
           </div>
 
           {/* Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             {visibleProjects.map((project, index) => (
               <div key={index} className="relative">
 
-                {/* Back Card */}
-                <div className="absolute inset-0 translate-x-3 translate-y-3
+                {/* Back Card (disabled hover on mobile) */}
+                <div className="
+                  absolute inset-0 translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3
                   rounded-2xl
                   bg-gray-200/80 dark:bg-gray-900/60
-                  border border-gray-300 dark:border-gray-700/40"
-                />
+                  border border-gray-300 dark:border-gray-700/40
+                " />
 
                 {/* Front Card */}
                 <div
@@ -136,11 +137,11 @@ export function Projects() {
                   bg-white dark:bg-gradient-to-br dark:from-gray-900/80 dark:to-gray-800/60
                   border-gray-200 dark:border-gray-700/50
                   shadow-xl transition-all duration-500
-                  hover:scale-105 hover:-translate-y-2
+                  sm:hover:scale-105 sm:hover:-translate-y-2
                   ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 >
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-44 sm:h-48 overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -152,17 +153,22 @@ export function Projects() {
                       to-transparent"
                     />
 
-                    <span className="absolute top-4 left-4 text-xs font-medium
+                    <span className="
+                      absolute top-3 left-3 sm:top-4 sm:left-4
+                      text-xs font-medium
                       px-3 py-1 rounded-full
                       bg-white/80 text-gray-800
-                      dark:bg-black/60 dark:text-gray-300">
+                      dark:bg-black/60 dark:text-gray-300
+                    ">
                       {project.tech}
                     </span>
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 flex flex-col flex-1 space-y-4">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                  <div className="p-5 sm:p-6 flex flex-col flex-1 space-y-4">
+                    <h3 className="text-lg sm:text-xl font-bold">
+                      {project.title}
+                    </h3>
 
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       {project.description}
@@ -190,15 +196,17 @@ export function Projects() {
                     </div>
 
                     {/* Buttons */}
-                    <div className="mt-auto pt-4 flex justify-between">
+                    <div className="mt-auto pt-4 flex flex-col sm:flex-row sm:justify-between gap-3">
                       <div className="flex gap-3">
                         <a
                           href={project.codeLink}
                           target="_blank"
-                          className="h-10 px-4 flex items-center gap-2 rounded-lg
-                          bg-gray-100 text-gray-800
-                          dark:bg-gray-800 dark:text-gray-300
-                          text-sm transition"
+                          className="
+                            h-10 px-4 flex items-center gap-2 rounded-lg
+                            bg-gray-100 text-gray-800
+                            dark:bg-gray-800 dark:text-gray-300
+                            text-sm
+                          "
                         >
                           <Github className="w-4 h-4" />
                           Code
@@ -218,9 +226,11 @@ export function Projects() {
 
                       <button
                         onClick={() => setActiveProject(project)}
-                        className="h-10 px-4 rounded-lg text-sm
-                        text-orange-500 border border-orange-400/40
-                        hover:bg-orange-500/10"
+                        className="
+                          h-10 px-4 rounded-lg text-sm
+                          text-orange-500 border border-orange-400/40
+                          hover:bg-orange-500/10
+                        "
                       >
                         Details →
                       </button>
@@ -232,50 +242,55 @@ export function Projects() {
           </div>
 
           {/* View All */}
-          <div className="flex justify-center mt-16">
-          <div
-            className={`bg-gradient-to-br from-secondary/80 to-secondary/40
-            backdrop-blur-xl rounded-2xl p-6
-            border border-border/50
-            shadow-2xl transition-all duration-700
-            ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-          >
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="px-10 py-3 rounded-full font-semibold
-              bg-orange-500 text-white
-              hover:bg-orange-600
-              transition-all duration-300
-              shadow-lg hover:shadow-orange-500/40"
+          <div className="flex justify-center mt-12 sm:mt-16">
+            <div
+              className={`bg-gradient-to-br from-secondary/80 to-secondary/40
+              backdrop-blur-xl rounded-2xl p-5 sm:p-6
+              border border-border/50
+              shadow-2xl transition-all duration-700
+              ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
             >
-              {showAll ? "Show Less" : "View All Projects"}
-            </button>
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-8 sm:px-10 py-3 rounded-full font-semibold
+                bg-orange-500 text-white
+                hover:bg-orange-600
+                transition-all duration-300
+                shadow-lg hover:shadow-orange-500/40"
+              >
+                {showAll ? "Show Less" : "View All Projects"}
+              </button>
+            </div>
           </div>
-        </div>
 
         </div>
       </section>
 
       {/* ================= MODAL ================= */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center
-        bg-black/70 backdrop-blur-sm">
-
-          <div className="relative max-w-3xl w-full mx-4
-          bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800
-          rounded-2xl overflow-hidden border
-          border-gray-300 dark:border-gray-700 shadow-2xl">
-
+        <div className="
+          fixed inset-0 z-50 flex items-center justify-center
+          bg-black/70 backdrop-blur-sm
+          px-3
+        ">
+          <div className="
+            relative max-w-3xl w-full
+            bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800
+            rounded-2xl overflow-hidden border
+            border-gray-300 dark:border-gray-700 shadow-2xl
+          ">
             <button
               onClick={() => setActiveProject(null)}
-              className="absolute top-4 right-4 z-10 w-10 h-10
-              rounded-full bg-gray-200 dark:bg-black/60
-              text-gray-800 dark:text-white hover:text-orange-400"
+              className="
+                absolute top-3 right-3 z-10 w-9 h-9 sm:w-10 sm:h-10
+                rounded-full bg-gray-200 dark:bg-black/60
+                text-gray-800 dark:text-white hover:text-orange-400
+              "
             >
               ✕
             </button>
 
-            <div className="relative h-64">
+            <div className="relative h-52 sm:h-64">
               <img
                 src={activeProject.image}
                 alt={activeProject.title}
@@ -283,28 +298,30 @@ export function Projects() {
               />
               <div className="absolute inset-0 bg-gradient-to-t
                 from-white/90 dark:from-gray-900/80 to-transparent" />
-              <h3 className="absolute bottom-4 left-6 text-2xl font-bold">
+              <h3 className="absolute bottom-4 left-4 sm:left-6 text-xl sm:text-2xl font-bold">
                 {activeProject.title}
               </h3>
             </div>
 
-            <div className="p-6 space-y-6">
-              <p className="text-gray-600 dark:text-gray-400">
+            <div className="p-5 sm:p-6 space-y-6">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                 {activeProject.description}
               </p>
 
               <div>
-                <h4 className="text-lg font-semibold mb-3">
+                <h4 className="text-base sm:text-lg font-semibold mb-3">
                   Skills & Technologies Used
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {activeProject.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-4 py-1.5 rounded-full text-sm
-                      bg-orange-500/10 text-orange-600
-                      dark:text-orange-400
-                      border border-orange-500/30"
+                      className="
+                        px-4 py-1.5 rounded-full text-sm
+                        bg-orange-500/10 text-orange-600
+                        dark:text-orange-400
+                        border border-orange-500/30
+                      "
                     >
                       {tech}
                     </span>
@@ -318,12 +335,14 @@ export function Projects() {
                 ))}
               </ul>
 
-              <div className="flex gap-4 pt-2">
+              <div className="flex flex-wrap gap-4 pt-2">
                 <a
                   href={activeProject.codeLink}
                   target="_blank"
-                  className="px-5 py-2 rounded-lg bg-gray-200
-                  dark:bg-gray-800 text-sm flex items-center gap-2"
+                  className="
+                    px-5 py-2 rounded-lg bg-gray-200
+                    dark:bg-gray-800 text-sm flex items-center gap-2
+                  "
                 >
                   <Github className="w-4 h-4" />
                   View Code
