@@ -25,7 +25,7 @@ const projects: Project[] = [
     image: "/job-portal.jpg",
     codeLink: "https://github.com/pra9536/Job-Portal",
     demoLink: "https://job-portal-tan-nu.vercel.app/",
-    gradient: "from-blue-500 to-blue-600",
+    gradient: "from-teal-500 to-teal-600",
     technologies: ["Java", "Sprint Boot", "MongoDB", "Restful APIs", "Maven"],
    features: [
   "Secure user authentication with role-based access",
