@@ -18,6 +18,23 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Job Portal System",
+    tech: "Spring Boot, React",
+    description:
+      "A full-stack Job Portal that connects recruiters and job seekers through job listings, applications, and real-time management features.",
+    image: "/job-portal.jpg",
+    codeLink: "https://github.com/pra9536/Job-Portal",
+    demoLink: "https://job-portal-tan-nu.vercel.app/",
+    gradient: "from-blue-500 to-blue-600",
+    technologies: ["Java", "Sprint Boot", "MongoDB", "Restful APIs", "Maven"],
+   features: [
+  "Secure user authentication with role-based access",
+  "Recruiter dashboard for posting and managing jobs",
+  "Advanced job search with filters (location, role, skills)",
+  "Job application tracking for candidates",
+],
+  },
+  {
     title: "Quiz Application",
     tech: "Core Java, Swing",
     description:
