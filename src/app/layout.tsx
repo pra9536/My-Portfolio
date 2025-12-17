@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://my-portfolio-weld-one-d6hj1j4iw4.vercel.app"
+    "https://prateekyadav-portfolio.vercel.app/"
   ),
 
   title: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Prateek Yadav | Java Full Stack Developer",
     description:
       "Java Full Stack Developer with expertise in Spring Boot, React, MySQL, and scalable backend systems. View projects, skills, and professional work.",
-    url: "https://my-portfolio-weld-one-d6hj1j4iw4.vercel.app",
+    url: "https://prateekyadav-portfolio.vercel.app/",
     siteName: "Prateek Yadav Portfolio",
     images: [
       {
