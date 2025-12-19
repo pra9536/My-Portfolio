@@ -41,7 +41,7 @@ const projects: Project[] = [
       "Desktop-based interactive quiz application with multiple choice questions, timer functionality, and score tracking.",
     image: "/quiz-app-interface.jpg",
     codeLink: "https://github.com/pra9536/QuizApplication",
-    demoLink: "404",
+    demoLink: "NULL",
     gradient: "from-blue-500 to-blue-600",
     technologies: ["Java", "Swing", "OOP", "Event Handling", "MVC Pattern", "JDBC"],
     features: [
@@ -58,7 +58,7 @@ const projects: Project[] = [
       "Movie ticket booking system with seat selection, payment integration, and booking management.",
     image: "/movie-booking-app.jpg",
     codeLink: "https://github.com/pra9536/BookMyMovies-Java-JDBC",
-    demoLink: "404",
+    demoLink: "NULL",
     gradient: "from-purple-500 to-purple-600",
     technologies: [
       "Java",
@@ -83,7 +83,7 @@ const projects: Project[] = [
       "Movie watchlist manager built with Spring Boot. Features movie search and ratings.",
     image: "/watchlist-app.jpg",
     codeLink: "https://github.com/pra9536/WatchListApp",
-    demoLink: "404",
+    demoLink: "NULL",
     gradient: "from-green-500 to-green-600",
     technologies: [
       "Spring Boot",
