@@ -279,7 +279,7 @@ export function Achievements() {
             <Stat value="9+" label="Certifications" gradient="from-orange-400 to-orange-500" />
             <Stat value="900+" label="Problems Solved" gradient="from-green-400 to-green-500" />
             <Stat value="24+" label="Technologies" gradient="from-blue-400 to-blue-500" />
-            <Stat value="3+" label="Major Projects" gradient="from-purple-400 to-purple-500" />
+            <Stat value="8+" label="Major Projects" gradient="from-purple-400 to-purple-500" />
           </div>
         </div>
 
