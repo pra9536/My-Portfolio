@@ -277,9 +277,9 @@ export function Achievements() {
           backdrop-blur-xl border border-border/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
             <Stat value="9+" label="Certifications" gradient="from-orange-400 to-orange-500" />
-            <Stat value="900+" label="Problems Solved" gradient="from-green-400 to-green-500" />
+            <Stat value="500+" label="Problems Solved" gradient="from-green-400 to-green-500" />
             <Stat value="24+" label="Technologies" gradient="from-blue-400 to-blue-500" />
-            <Stat value="8+" label="Projects" gradient="from-purple-400 to-purple-500" />
+            <Stat value="5+" label="Projects" gradient="from-purple-400 to-purple-500" />
           </div>
         </div>
 
