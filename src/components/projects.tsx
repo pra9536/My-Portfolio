@@ -105,7 +105,7 @@ const projects: Project[] = [
   tech: "Spring Boot, React, Docker",
   description:
     "A full-stack SaaS utility that allows users to optimize YouTube content by extracting hidden metadata and generating SEO-friendly tags using the YouTube Data API.",
-  image: "/youtube-seo-tool.jpg", // Make sure to add a screenshot here
+  image: "/you-tube-tools.png", 
   codeLink: "https://github.com/pra9536/SAAS-Product",
   demoLink: "https://saas-product-1.onrender.com", 
   gradient: "from-red-500 to-red-600",
