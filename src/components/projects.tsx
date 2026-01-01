@@ -42,7 +42,7 @@ const projects: Project[] = [
   image: "/you-tube-tools.png", 
   codeLink: "https://github.com/pra9536/SAAS-Product",
   demoLink: "https://saas-product-1.onrender.com", 
-  gradient: "from-cyan-500 to-cyan-600",
+  gradient: "from-sky-500 to-sky-600",
   technologies: [
     "Java 21", 
     "Spring Boot 3", 
