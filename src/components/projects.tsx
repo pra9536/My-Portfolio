@@ -35,6 +35,32 @@ const projects: Project[] = [
 ],
   },
   {
+  title: "YouTube SEO Tools (SaaS)",
+  tech: "Spring Boot, React, Docker",
+  description:
+    "A full-stack SaaS utility that allows users to optimize YouTube content by extracting hidden metadata and generating SEO-friendly tags using the YouTube Data API.",
+  image: "/you-tube-tools.png", 
+  codeLink: "https://github.com/pra9536/SAAS-Product",
+  demoLink: "https://saas-product-1.onrender.com", 
+  gradient: "from-red-500 to-red-600",
+  technologies: [
+    "Java 21", 
+    "Spring Boot 3", 
+    "React.js", 
+    "Docker", 
+    "YouTube Data API", 
+    "RESTful Services",
+    "CORS Configuration"
+  ],
+  features: [
+    "Real-time Video Tag Extraction from URL",
+    "Automated SEO Tag Generation for Titles",
+    "High-resolution Thumbnail Fetching & Preview",
+    "Multi-stage Dockerized Deployment for Backend",
+    "Cross-Origin Resource Sharing (CORS) security implementation",
+  ],
+},
+  {
     title: "Quiz Application",
     tech: "Core Java, Swing",
     description:
@@ -100,32 +126,6 @@ const projects: Project[] = [
       "Responsive UI",
     ],
   },
-  {
-  title: "YouTube SEO Tools (SaaS)",
-  tech: "Spring Boot, React, Docker",
-  description:
-    "A full-stack SaaS utility that allows users to optimize YouTube content by extracting hidden metadata and generating SEO-friendly tags using the YouTube Data API.",
-  image: "/you-tube-tools.png", 
-  codeLink: "https://github.com/pra9536/SAAS-Product",
-  demoLink: "https://saas-product-1.onrender.com", 
-  gradient: "from-red-500 to-red-600",
-  technologies: [
-    "Java 21", 
-    "Spring Boot 3", 
-    "React.js", 
-    "Docker", 
-    "YouTube Data API", 
-    "RESTful Services",
-    "CORS Configuration"
-  ],
-  features: [
-    "Real-time Video Tag Extraction from URL",
-    "Automated SEO Tag Generation for Titles",
-    "High-resolution Thumbnail Fetching & Preview",
-    "Multi-stage Dockerized Deployment for Backend",
-    "Cross-Origin Resource Sharing (CORS) security implementation",
-  ],
-},
 ]
 
 export function Projects() {
