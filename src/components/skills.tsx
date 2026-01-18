@@ -28,17 +28,17 @@ export function Skills() {
             <SkillCard title="Programming Languages">
               <SkillBar label="Java" percent={95} color="from-red-500 to-orange-500" tag="J" />
               <SkillBar label="JavaScript" percent={90} color="from-yellow-500 to-yellow-600" tag="JS" />
-              <SkillBar label="TypeScript" percent={85} color="from-blue-500 to-blue-600" tag="TS" />
+              <SkillBar label="SQL" percent={85} color="from-blue-500 to-blue-600" tag="TS" />
               <SkillBar label="Python" percent={80} color="from-green-500 to-blue-500" tag="Py" />
             </SkillCard>
           </LayeredCard>
 
           <LayeredCard>
             <SkillCard title="Backend Technologies">
-              <SkillBar label="Spring Boot" percent={95} color="from-green-500 to-green-600" tag="SB" />
+              <SkillBar label="Spring Framework" percent={95} color="from-green-500 to-green-600" tag="SB" />
+              <SkillBar label="Spring Boot" percent={80} color="from-fuchsia-500 to-purple-600" tag="AI" />
               <SkillBar label="REST APIs" percent={90} color="from-purple-500 to-purple-600" tag="API" />
               <SkillBar label="JDBC" percent={85} color="from-blue-500 to-indigo-500" tag="DB" />
-              <SkillBar label="Servlet" percent={80} color="from-teal-500 to-cyan-500" tag="MS" />
             </SkillCard>
           </LayeredCard>
         </div>
@@ -47,7 +47,16 @@ export function Skills() {
         {showAll && (
           <>
             {/* ROW 2 */}
-            <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
+             <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
+              <LayeredCard>
+                <SkillCard title="Backend Technologies">
+                  <SkillBar label="Servlet" percent={80} color="from-teal-500 to-cyan-500" tag="MS" />
+                  <SkillBar label="Spring Security" percent={75} color="from-blue-500 to-sky-600" tag="AZ" />
+                  <SkillBar label="Hibernate" percent={80} color="from-cyan-500 to-blue-600" tag="DK" />
+                  <SkillBar label="Postman" percent={85} color="from-emerald-500 to-green-600" tag="GCP" />
+                </SkillCard>
+              </LayeredCard>
+              
               <LayeredCard>
                 <SkillCard title="Frontend Technologies">
                   <SkillBar label="React" percent={90} color="from-cyan-500 to-blue-500" tag="R" />
@@ -57,26 +66,20 @@ export function Skills() {
                 </SkillCard>
               </LayeredCard>
 
-              <LayeredCard>
-                <SkillCard title="Database">
-                  <SkillBar label="MySQL" percent={90} color="from-blue-700 to-blue-900" tag="SQL" />
-                  <SkillBar label="MongoDB" percent={80} color="from-green-600 to-green-800" tag="MDB" />
-                  <SkillBar label="System Design" percent={80} color="from-purple-500 to-pink-600" tag="SD" />
-                  <SkillBar label="Database Design" percent={85} color="from-indigo-500 to-indigo-700" tag="DB" />
-                </SkillCard>
-              </LayeredCard>
+              
             </div>
 
             {/* ROW 3 */}
             <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
               <LayeredCard>
-                <SkillCard title="AI & Cloud Technologies">
-                  <SkillBar label="Artificial Intelligence" percent={80} color="from-fuchsia-500 to-purple-600" tag="AI" />
-                  <SkillBar label="Microsoft Azure" percent={75} color="from-blue-500 to-sky-600" tag="AZ" />
-                  <SkillBar label="Docker" percent={80} color="from-cyan-500 to-blue-600" tag="DK" />
-                  <SkillBar label="Google Cloud Platform" percent={85} color="from-emerald-500 to-green-600" tag="GCP" />
+                <SkillCard title="Database">
+                  <SkillBar label="MySQL" percent={90} color="from-blue-700 to-blue-900" tag="SQL" />
+                  <SkillBar label="MongoDB" percent={80} color="from-green-600 to-green-800" tag="MDB" />
+                  <SkillBar label="Artificial Intelligence" percent={80} color="from-purple-500 to-pink-600" tag="SD" />
+                  <SkillBar label="Microsoft Azure" percent={85} color="from-indigo-500 to-indigo-700" tag="DB" />
                 </SkillCard>
               </LayeredCard>
+              
 
               <LayeredCard>
                 <SkillCard title="Developer Tools">
