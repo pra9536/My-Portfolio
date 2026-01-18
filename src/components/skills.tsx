@@ -38,7 +38,7 @@ export function Skills() {
               <SkillBar label="Spring Boot" percent={95} color="from-green-500 to-green-600" tag="SB" />
               <SkillBar label="REST APIs" percent={90} color="from-purple-500 to-purple-600" tag="API" />
               <SkillBar label="JDBC" percent={85} color="from-blue-500 to-indigo-500" tag="DB" />
-              <SkillBar label="Microservices" percent={80} color="from-teal-500 to-cyan-500" tag="MS" />
+              <SkillBar label="Servlet" percent={80} color="from-teal-500 to-cyan-500" tag="MS" />
             </SkillCard>
           </LayeredCard>
         </div>
