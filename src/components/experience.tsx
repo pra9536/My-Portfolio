@@ -2,6 +2,7 @@
 
 import { useInView } from "@/hooks/use-in-view"
 import {
+  Building,
   Building2,
   Code2,
   ExternalLink,
@@ -14,9 +15,9 @@ const experiences = [
   company: "CodSoft",
   duration: "July 2024 – August 2024",
   type: "Internship",
-  Icon: Building2,
+  Icon: Building,
   gradient: "from-orange-500 to-red-500",
-  certificateLink: "PASTE_YOUR_CODSOFT_CERTIFICATE_LINK_HERE",
+  certificateLink: "https://drive.google.com/file/d/1lleUF0LeHnVoTK4c5gZVIuVyOnkmtnKn/view?usp=sharing",
   achievements: [
     "Designed and developed a console-based ATM Interface System using Core Java",
     "Implemented secure PIN authentication, balance inquiry, cash withdrawal, and deposit functionalities",
