@@ -10,6 +10,22 @@ import { useRef } from "react"
 
 const experiences = [
   {
+  title: "Java Programming Intern",
+  company: "CodSoft",
+  duration: "July 2024 – August 2024",
+  type: "Internship",
+  Icon: Building2,
+  gradient: "from-orange-500 to-red-500",
+  certificateLink: "PASTE_YOUR_CODSOFT_CERTIFICATE_LINK_HERE",
+  achievements: [
+    "Designed and developed a console-based ATM Interface System using Core Java",
+    "Implemented secure PIN authentication, balance inquiry, cash withdrawal, and deposit functionalities",
+    "Applied Object-Oriented Programming principles for clean, modular, and reusable code",
+    "Used Java Collections Framework and file handling for data management",
+    "Handled exceptions effectively to ensure robustness and error-free execution"
+  ],
+},
+  {
     title: "AI Azure Intern",
     company: "Microsoft",
     duration: "May 2025 – June 2025",
