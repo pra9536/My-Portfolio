@@ -17,8 +17,37 @@ type Project = {
 }
 
 const projects: Project[] = [
+
   {
-    title: "Job Portal System",
+  title: "SmartHealthCare: AI-Powered Clinical Console & Secure Transactional Ledger",
+  tech: "Spring Boot, React, Spring Data JPA, Java 17",
+  description:
+    "An enterprise-grade clinical console and medical records management portal featuring secure role-based access, an AI symptom triage chatbot, an ACID-compliant transaction ledger, and dynamic UPI QR code checkouts.",
+  image: "/smart-healthcare.jpg",
+  codeLink: "https://github.com/pra9536/Smart-Health-Care-System",
+  demoLink: "https://smart-health-care-system-u3bv.vercel.app/doctors",
+  gradient: "from-teal-500 to-indigo-600", 
+  technologies: [
+    "Java 17",
+    "Spring Boot",
+    "Spring Security (JWT)",
+    "Spring Data JPA",
+    "React",
+    "MySQL",
+    "Docker & Compose",
+    "jsPDF",
+    "REST APIs"
+  ],
+  features: [
+    "Secure JWT-based authentication with role-based dashboards for Doctors and Patients.",
+    "ACID-compliant transaction ledger using @Transactional to secure checkout state and prevent booking anomalies.",
+    "Interactive payment gateway with live-generated UPI QR codes matching exact doctor consultation fees.",
+    "AI-powered symptom triage chatbot integrating Claude 3.5 Sonnet with a local keyword fallback diagnostic engine.",
+    "Medical records timeline console for doctors with live search, filtering, and instant PDF receipt generation."
+  ],
+},
+  {
+    title: "HireSphere– Enterprise Job Portal Applicant Tracking System (ATS)",
     tech: "Spring Boot, React",
     description:
       "A full-stack Job Portal that connects recruiters and job seekers through job listings, applications, and real-time management features.",
@@ -26,7 +55,7 @@ const projects: Project[] = [
     codeLink: "https://github.com/pra9536/Job-Portal",
     demoLink: "https://job-portal-tan-nu.vercel.app/",
     gradient: "from-teal-500 to-teal-600",
-    technologies: ["Java", "Sprint Boot", "MongoDB", "Restful APIs", "Maven"],
+    technologies: ["Java", "Spring Boot", "Spring Security", "MongoDB", "Restful APIs", "Maven", "Redux Toolkit", "Maven", "RESTful APIs"],
    features: [
   "Secure user authentication with role-based access",
   "Recruiter dashboard for posting and managing jobs",
