@@ -18,6 +18,16 @@ import { useRef, useState } from "react"
 /* ================= DATA ================= */
 
 const achievements = [
+    {
+    Icon: Award, 
+    stat: "Qualified", 
+    title: "GATE Qualified (CS/IT)",
+    description:
+      "Qualified the Graduate Aptitude Test in Engineering in Computer Science with an outstanding rank, securing admission eligibility in premier research institutions.",
+    gradient: "from-blue-500 to-indigo-600",
+    link:
+      "https://drive.google.com/file/d/1lK4Doo40CxXb4ctUhjNvhhAbeRebe6uO/view?usp=sharing", 
+  },
   {
     Icon: Trophy,
     stat: "₹2,00,000",
