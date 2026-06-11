@@ -2,30 +2,29 @@
 
 import { useInView } from "@/hooks/use-in-view"
 import {
-  Building,
   Building2,
   Code2,
-  ExternalLink,
+  ExternalLink
 } from "lucide-react"
 import { useRef } from "react"
 
 const experiences = [
-  {
-  title: "Java Programming Intern",
-  company: "CodSoft",
-  duration: "July 2024 – August 2024",
-  type: "Internship",
-  Icon: Building,
-  gradient: "from-orange-500 to-red-500",
-  certificateLink: "https://drive.google.com/file/d/1lleUF0LeHnVoTK4c5gZVIuVyOnkmtnKn/view?usp=sharing",
-  achievements: [
-    "Designed and developed a console-based ATM Interface System using Core Java",
-    "Implemented secure PIN authentication, balance inquiry, cash withdrawal, and deposit functionalities",
-    "Applied Object-Oriented Programming principles for clean, modular, and reusable code",
-    "Used Java Collections Framework and file handling for data management",
-    "Handled exceptions effectively to ensure robustness and error-free execution"
-  ],
-},
+//   {
+//   title: "Java Programming Intern",
+//   company: "CodSoft",
+//   duration: "July 2024 – August 2024",
+//   type: "Internship",
+//   Icon: Building,
+//   gradient: "from-orange-500 to-red-500",
+//   certificateLink: "https://drive.google.com/file/d/1lleUF0LeHnVoTK4c5gZVIuVyOnkmtnKn/view?usp=sharing",
+//   achievements: [
+//     "Designed and developed a console-based ATM Interface System using Core Java",
+//     "Implemented secure PIN authentication, balance inquiry, cash withdrawal, and deposit functionalities",
+//     "Applied Object-Oriented Programming principles for clean, modular, and reusable code",
+//     "Used Java Collections Framework and file handling for data management",
+//     "Handled exceptions effectively to ensure robustness and error-free execution"
+//   ],
+// },
   {
     title: "AI Azure Intern",
     company: "Microsoft",
