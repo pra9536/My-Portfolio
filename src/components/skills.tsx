@@ -28,17 +28,17 @@ export function Skills() {
             <SkillCard title="Programming Languages">
               <SkillBar label="Java" percent={95} color="from-red-500 to-orange-500" tag="J" />
               <SkillBar label="JavaScript" percent={90} color="from-yellow-500 to-yellow-600" tag="JS" />
-              <SkillBar label="SQL" percent={85} color="from-blue-500 to-blue-600" tag="TS" />
-              <SkillBar label="OOP" percent={80} color="from-green-500 to-blue-500" tag="Py" />
+              <SkillBar label="SQL" percent={85} color="from-blue-500 to-blue-600" tag="SQL" />
+              <SkillBar label="OOP" percent={80} color="from-green-500 to-blue-500" tag="OOP" />
             </SkillCard>
           </LayeredCard>
 
           <LayeredCard>
             <SkillCard title="Core Java Concepts">
-              <SkillBar label="Collections Framework" percent={80} color="from-fuchsia-500 to-purple-600" tag="AI" />
-              <SkillBar label="Exception Handling" percent={95} color="from-green-500 to-green-600" tag="SB" />
-              <SkillBar label="Multithreading" percent={90} color="from-purple-500 to-purple-600" tag="API" />
-              <SkillBar label="Java Swing" percent={85} color="from-blue-500 to-indigo-500" tag="DB" />
+              <SkillBar label="Collections Framework" percent={80} color="from-fuchsia-500 to-purple-600" tag="CF" />
+              <SkillBar label="Exception Handling" percent={95} color="from-green-500 to-green-600" tag="EH" />
+              <SkillBar label="Multithreading" percent={90} color="from-purple-500 to-purple-600" tag="MT" />
+              <SkillBar label="Java Swing" percent={85} color="from-blue-500 to-indigo-500" tag="JS" />
             </SkillCard>
           </LayeredCard>
         </div>
@@ -50,10 +50,10 @@ export function Skills() {
              <div className="grid md:grid-cols-2 gap-12 mt-12 justify-items-center">
               <LayeredCard>
               <SkillCard title="Backend Technologies">
-              <SkillBar label="Spring Boot" percent={80} color="from-fuchsia-500 to-purple-600" tag="AI" />
-              <SkillBar label="Spring Data JPA" percent={95} color="from-green-500 to-green-600" tag="SB" />
+              <SkillBar label="Spring Boot" percent={80} color="from-fuchsia-500 to-purple-600" tag="SB" />
+              <SkillBar label="Spring Data JPA" percent={95} color="from-green-500 to-green-600" tag="SDJ" />
               <SkillBar label="REST APIs" percent={90} color="from-purple-500 to-purple-600" tag="API" />
-              <SkillBar label="Maven" percent={85} color="from-blue-500 to-indigo-500" tag="DB" />
+              <SkillBar label="Maven" percent={85} color="from-blue-500 to-indigo-500" tag="MV" />
             </SkillCard>
               </LayeredCard>
               
@@ -75,8 +75,8 @@ export function Skills() {
                 <SkillCard title="Database">
                   <SkillBar label="MySQL" percent={90} color="from-blue-700 to-blue-900" tag="SQL" />
                   <SkillBar label="MongoDB" percent={80} color="from-green-600 to-green-800" tag="MDB" />
-                  <SkillBar label="Redis" percent={80} color="from-purple-500 to-pink-600" tag="SD" />
-                  <SkillBar label="Microsoft Azure" percent={85} color="from-indigo-500 to-indigo-700" tag="DB" />
+                  <SkillBar label="Redis" percent={80} color="from-purple-500 to-pink-600" tag="RD" />
+                  <SkillBar label="Microsoft Azure" percent={85} color="from-indigo-500 to-indigo-700" tag="MA" />
                 </SkillCard>
               </LayeredCard>
               
