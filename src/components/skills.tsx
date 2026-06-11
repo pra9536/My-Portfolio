@@ -29,7 +29,7 @@ export function Skills() {
               <SkillBar label="Java" percent={95} color="from-red-500 to-orange-500" tag="J" />
               <SkillBar label="JavaScript" percent={90} color="from-yellow-500 to-yellow-600" tag="JS" />
               <SkillBar label="SQL" percent={85} color="from-blue-500 to-blue-600" tag="SQL" />
-              <SkillBar label="OOP" percent={80} color="from-green-500 to-blue-500" tag="OOP" />
+              <SkillBar label="OOP" percent={95} color="from-green-500 to-blue-500" tag="OOP" />
             </SkillCard>
           </LayeredCard>
 
@@ -51,9 +51,9 @@ export function Skills() {
               <LayeredCard>
               <SkillCard title="Backend Technologies">
               <SkillBar label="Spring Boot" percent={80} color="from-fuchsia-500 to-purple-600" tag="SB" />
-              <SkillBar label="Spring Data JPA" percent={95} color="from-green-500 to-green-600" tag="SDJ" />
+              <SkillBar label="Spring Data JPA" percent={85} color="from-green-500 to-green-600" tag="SDJ" />
               <SkillBar label="REST APIs" percent={90} color="from-purple-500 to-purple-600" tag="API" />
-              <SkillBar label="Maven" percent={85} color="from-blue-500 to-indigo-500" tag="MV" />
+              <SkillBar label="Maven" percent={80} color="from-blue-500 to-indigo-500" tag="MV" />
             </SkillCard>
               </LayeredCard>
               
