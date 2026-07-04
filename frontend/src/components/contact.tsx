@@ -37,7 +37,8 @@ export default function Collaborate() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("http://localhost:8080/api/proposals", {
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "https://my-portfolio-06a2.onrender.com";
+      const response = await fetch(`${apiBaseUrl}/api/proposals`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
