@@ -9,12 +9,18 @@ import {
 } from "framer-motion"
 import { Coffee, Database } from "lucide-react"
 import { useTheme } from "next-themes"
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FaReact } from "react-icons/fa"
 
 export function About() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref)
+
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // ✅ IMPORTANT: resolvedTheme only
   const { resolvedTheme } = useTheme()
@@ -43,7 +49,7 @@ export function About() {
   }
 
   const imageSrc =
-    resolvedTheme === "dark" ? "/photo2.png" : "/photo1.png"
+    mounted && resolvedTheme === "dark" ? "/photo2.png" : "/photo1.png"
 
   return (
     <section
