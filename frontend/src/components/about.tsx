@@ -43,7 +43,7 @@ export function About() {
   }
 
   const imageSrc =
-    resolvedTheme === "dark" ? "/Photo2.png" : "/Photo1.png"
+    resolvedTheme === "dark" ? "/photo2.png" : "/photo1.png"
 
   return (
     <section
