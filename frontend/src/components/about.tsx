@@ -156,18 +156,26 @@ export function About() {
                     shadow-2xl
                   "
                 >
-                  <AnimatePresence mode="wait">
-                    <motion.img
-                      key={resolvedTheme}
-                      src={imageSrc}
+                  {mounted ? (
+                    <AnimatePresence mode="wait">
+                      <motion.img
+                        key={resolvedTheme}
+                        src={imageSrc}
+                        alt="Prateek Yadav"
+                        className="absolute inset-0 w-full h-full object-cover object-top"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.45, ease: "easeInOut" }}
+                      />
+                    </AnimatePresence>
+                  ) : (
+                    <img
+                      src="/photo1.png"
                       alt="Prateek Yadav"
                       className="absolute inset-0 w-full h-full object-cover object-top"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.45, ease: "easeInOut" }}
                     />
-                  </AnimatePresence>
+                  )}
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 </motion.div>
